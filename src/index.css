@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.image-container {
+  position: relative;
+  width: 100%;
+}
+
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.86), rgba(0, 0, 0, 0.86));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover .background-overlay {
+  opacity: 1;
+}
+
+.image-container img {
+  display: block;
+  /* width: 100%; */
+  height: auto;
+}
